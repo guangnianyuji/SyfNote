@@ -92,13 +92,9 @@ sh run.sh
 
 If we run successfully, the WER (Word Error Rate) result will appear as shown in the following
 
-![image-20231201162113130](C:/Users/sunyifei/AppData/Roaming/Typora/typora-user-images/image-20231201162113130.png)
+![image-20240117220658928](Report.assets/image-20240117220658928.png)
 
-
-
-![image-20231201162251537](C:/Users/sunyifei/AppData/Roaming/Typora/typora-user-images/image-20231201162251537.png)
-
-
+![image-20240117220708964](Report.assets/image-20240117220708964.png)
 
 ## thchs30
 
@@ -184,20 +180,13 @@ exp/mono: nj=4 align prob=-100.08 over 25.49h [retry=0.2%, fail=0.0%] states=656
 steps/train_mono.sh: Done training monophone system in exp/mono
 ```
 
-![image-20231203215411874](C:/Users/sunyifei/AppData/Roaming/Typora/typora-user-images/image-20231203215411874.png)
+![image-20231203215411874](Report.assets/image-20231203215411874.png)
 
 The log indicates that a monophone system training, part of a speech recognition experiment using Kaldi software, has been completed. The training utilized four parallel jobs and took 25.49 hours, with a very low retry rate (0.2%) and no failures. It achieved a log likelihood alignment probability of -100.08, and the model was configured with 656 states and 989 Gaussians. The results are stored in the directory 'exp/mono'.
 
 ### triphone
 
-The result is
-
-```sh
-exp/tri1: nj=4 align prob=-96.76 over 25.48h [retry=0.3%, fail=0.0%] states=1672 gauss=10026 tree-impr=4.80
-steps/train_deltas.sh: Done training system with delta+delta-delta features in exp/tri1
-```
-
-![image-20231203193834038](C:/Users/sunyifei/AppData/Roaming/Typora/typora-user-images/image-20231203193834038.png)
+The result is![image-20240117222045366](Report.assets/image-20240117222045366.png)
 
 The log entry suggests the completion of a more complex triphone-based speech recognition system using delta and delta-delta features, conducted with the Kaldi toolkit. The process ran with four jobs in parallel, taking 25.48 hours, showing a slight improvement in alignment probability to -96.76, with a retry rate of 0.3% and no failures. This system is larger, with 1672 states and 10026 Gaussians, and it shows a tree improvement score of 4.80. The trained model's data is stored under the 'exp/tri1' directory.
 
@@ -212,7 +201,7 @@ exp/tri2b: nj=4 align prob=-48.20 over 25.48h [retry=0.5%, fail=0.0%] states=207
 steps/train_lda_mllt.sh: Done training system with LDA+MLLT features in exp/tri2b
 ```
 
-![image-20231203194007171](C:/Users/sunyifei/AppData/Roaming/Typora/typora-user-images/image-20231203194007171.png)
+![image-20240117222052894](Report.assets/image-20240117222052894.png)
 
 The log reflects that the 'exp/tri2b' directory holds the results of training a triphone speech recognition system with Linear Discriminant Analysis (LDA) and Maximum Likelihood Linear Transform (MLLT) optimizations. This training ran with four parallel jobs for 25.48 hours, substantially improving the alignment probability to -48.20. The system shows a modest retry rate of 0.5% with no failures, consisting of 2072 states and 15030 Gaussians, and it records a tree improvement of 4.32. Additional LDA and MLLT improvements are noted with scores of 24.01 and 1.16 for improvement and 1.67 for log determinant, respectively.
 
@@ -225,7 +214,7 @@ exp/tri3b: nj=4 align prob=-47.93 over 25.48h [retry=0.7%, fail=0.0%] states=207
 steps/train_sat.sh: done training SAT system in exp/tri3b
 ```
 
-![image-20231203194133106](C:/Users/sunyifei/AppData/Roaming/Typora/typora-user-images/image-20231203194133106.png)
+![image-20240117222058747](Report.assets/image-20240117222058747.png)
 
 The training session logged under 'exp/tri3b' indicates successful training of an advanced triphone-based speech recognition system, incorporating feature-space Maximum Likelihood Linear Regression (fMLLR). This session also utilized four parallel jobs, ran for 25.48 hours, and achieved a very good alignment probability of -47.93. Despite a slightly higher retry rate of 0.7%, there were no failures. The system maintained 2072 states and had a nearly consistent number of Gaussians at 15018. Notably, the fMLLR improvement was recorded at 2.41 over 18.97 hours, and the tree-based clustering improvement was at 6.36, indicating enhancements in the model's accuracy and robustness.
 
@@ -240,7 +229,7 @@ cd tools
 ./install_portaudio.sh
 ```
 
-![image-20231203194612367](C:/Users/sunyifei/AppData/Roaming/Typora/typora-user-images/image-20231203194612367.png)
+![image-20240117222105676](Report.assets/image-20240117222105676.png)
 
 2. Compile Related Tools:
 
@@ -251,21 +240,21 @@ cd tools
 
 3. Copy the  dir `kaldi/egs/voxforge/online_demo` to `kaldi/egs/thchs30`
 
-   ![image-20231203200524498](C:/Users/sunyifei/AppData/Roaming/Typora/typora-user-images/image-20231203200524498.png)
+   ![image-20240117222111123](Report.assets/image-20240117222111123.png)
 
 4. Record your audio. Create `online-data` directory. Put your audio, as the following image.
 
-   ![image-20231203201842011](C:/Users/sunyifei/AppData/Roaming/Typora/typora-user-images/image-20231203201842011.png)
+   ![image-20240117222118371](Report.assets/image-20240117222118371.png)
 
 5. Change `kaldi/egs/thchs30/online_demo/run.sh`.
 
    Comment out the file downloading section .
 
-   ![image-20231203195906313](C:/Users/sunyifei/AppData/Roaming/Typora/typora-user-images/image-20231203195906313.png)
+   ![image-20240117222126697](Report.assets/image-20240117222126697.png)
 
 ​	Change the acoustic model type ac_model_type to the trained model  before. For example, I choose `tri3b`
 
-![image-20231203200121399](C:/Users/sunyifei/AppData/Roaming/Typora/typora-user-images/image-20231203200121399.png)
+![image-20240117222132383](Report.assets/image-20240117222132383.png)
 
 6. In dir `online-data`, create dir  `models`.
 
@@ -279,11 +268,11 @@ cd tools
 
      `words.txt `and `HCLG.fst`.
 
-   ![image-20231203202820088](C:/Users/sunyifei/AppData/Roaming/Typora/typora-user-images/image-20231203202820088.png)
+   ![image-20240117222138150](Report.assets/image-20240117222138150.png)
 
 7. Modify the recognition code to use your recorded audio  and use your model.
 
-   ![image-20231203204313446](C:/Users/sunyifei/AppData/Roaming/Typora/typora-user-images/image-20231203204313446.png)
+   ![image-20240117222142427](Report.assets/image-20240117222142427.png)
 
 ​	and run the cmd `online_demo\run.sh`.(Exactly,this type of `relative address` often elicits errors, so I use the `absolute address`  in fact.)
 
@@ -293,7 +282,7 @@ cd tools
 
 ​	And my output is
 
-![image-20231203214856829](C:/Users/sunyifei/AppData/Roaming/Typora/typora-user-images/image-20231203214856829.png)
+![image-20240117222146795](Report.assets/image-20240117222146795.png)
 
 
 
