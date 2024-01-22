@@ -9,6 +9,7 @@
 | 软件工程课程设计   | 4*doc                                                        | 2023 fall,dqf  | copy+pre                                  |
 | 计算机视觉         | 3*assignment, 1 * final exam  collection， 1 * project (simple and crude) https://github.com/guangnianyuji/cv-iviz.git | 2023 fall, zl  | 不明觉厉，最后也背书(⊙o⊙)                 |
 | 专业导论（信息类） | 1* final essay , 1* final ppt                                | 2023 fall, zjh | 水课，但pre完老师夸我做的认真！不要太神奇 |
+| 计算机网络         | 3 * homework, 1 * note                                       | 2023 fall, wj  | 期末速成知识体系的美，平常也不听          |
 
 
 
