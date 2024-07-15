@@ -10,8 +10,11 @@
 | 计算机视觉                   | 3*assignment, 1 * final exam  collection， 1 * project (simple and crude) https://github.com/guangnianyuji/cv-iviz.git | 2023 fall, zl   | U不明觉厉，最后也背书(⊙o⊙)                          |
 | 专业导论（信息类）           | 1* final essay , 1* final ppt                                | 2023 fall, zjh  | U水课，但pre完老师夸我做的认真！不要太神奇          |
 | 计算机网络                   | 3 * homework, 1 * note                                       | 2023 fall, wj   | U期末速成知识体系的美，平常也不听                   |
-| 软件设计模式                 | 2* design pattern introduction, 1* doc for our project https://github.com/hugeBlack/bigRichMan.git | 2023 fall, sy   | U老师是我感受到最尊重学生的老师（虽然有黑色星期三） |
+| 软件设计模式                 | 2* design pattern introduction, 1* doc for our project https://github.com/hugeBlack/bigRichMan.git<br /> | 2023 fall, sy   | U老师是我感受到最尊重学生的老师（虽然有黑色星期三） |
+| 软件测试                     | 3*Assignment                                                 | 2024 spring, lq | U什么都没学会(                                      |
 | [选修]中国历史与文化（中外） | 1*Introduction of Chinese Architecture                       | 2024 Spring, wh | U很水的选修，很好的老师                             |
+
+
 
 
 
